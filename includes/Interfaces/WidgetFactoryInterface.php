@@ -9,5 +9,5 @@ namespace JPJuliao\MD2Elementor\Interfaces;
  */
 interface WidgetFactoryInterface
 {
-  public function create(array $attributes): array;
+    public function create(array $attributes): array;
 }

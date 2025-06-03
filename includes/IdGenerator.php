@@ -14,36 +14,36 @@ class IdGenerator
    *
    * @var IdGenerator
    */
-  private static $instance = null;
+    private static $instance = null;
 
   /**
    * Element ID
    *
    * @var int
    */
-  private $elementId = 0;
+    private $elementId = 0;
 
   /**
    * Get the instance of the IdGenerator
    *
    * @return IdGenerator
    */
-  public static function getInstance()
-  {
-    if (null === self::$instance) {
-      self::$instance = new self();
+    public static function getInstance()
+    {
+        if (null === self::$instance) {
+            self::$instance = new self();
+        }
+        return self::$instance;
     }
-    return self::$instance;
-  }
 
   /**
    * Generate a new ID
    *
    * @return string
    */
-  public function generate()
-  {
-    $this->elementId++;
-    return (string)$this->elementId;
-  }
+    public function generate()
+    {
+        $this->elementId++;
+        return (string)$this->elementId;
+    }
 }

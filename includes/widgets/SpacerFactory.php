@@ -12,24 +12,23 @@ use JPJuliao\MD2Elementor\Interfaces\WidgetFactoryInterface;
  */
 class SpacerFactory implements WidgetFactoryInterface
 {
-
   /**
    * Create a spacer
    *
    * @param array $attributes
    * @return array
    */
-  public function create(array $attributes): array
-  {
-    return [
-      'id' => IdGenerator::getInstance()->generate(),
-      'elType' => 'widget',
-      'widgetType' => 'spacer',
-      'settings' => [
+    public function create(array $attributes): array
+    {
+        return [
+        'id' => IdGenerator::getInstance()->generate(),
+        'elType' => 'widget',
+        'widgetType' => 'spacer',
+        'settings' => [
         'space' => [
           'size' => intval($attributes['height'] ?? 50)
         ]
-      ]
-    ];
-  }
+        ]
+        ];
+    }
 }

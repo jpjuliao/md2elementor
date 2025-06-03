@@ -12,34 +12,34 @@ use JPJuliao\MD2Elementor\Widgets\ImageFactory;
  */
 class ImageFactoryTest extends TestCase
 {
-  private $factory;
+    private $factory;
 
-  protected function setUp(): void
-  {
-    $this->factory = new ImageFactory();
-  }
+    protected function setUp(): void
+    {
+        $this->factory = new ImageFactory();
+    }
 
-  public function testCreateWithRequiredValues()
-  {
-    $image = $this->factory->create([
-      'url' => 'https://example.com/image.jpg',
-      'alt' => 'Test Image'
-    ]);
+    public function testCreateWithRequiredValues()
+    {
+        $image = $this->factory->create([
+        'url' => 'https://example.com/image.jpg',
+        'alt' => 'Test Image'
+        ]);
 
-    $this->assertEquals('widget', $image['elType']);
-    $this->assertEquals('image', $image['widgetType']);
-    $this->assertEquals('https://example.com/image.jpg', $image['settings']['image']['url']);
-    $this->assertEquals('Test Image', $image['settings']['image_alt']);
-    $this->assertEquals('', $image['settings']['image']['id']);
-  }
+        $this->assertEquals('widget', $image['elType']);
+        $this->assertEquals('image', $image['widgetType']);
+        $this->assertEquals('https://example.com/image.jpg', $image['settings']['image']['url']);
+        $this->assertEquals('Test Image', $image['settings']['image_alt']);
+        $this->assertEquals('', $image['settings']['image']['id']);
+    }
 
-  public function testCreateWithoutAltText()
-  {
-    $image = $this->factory->create([
-      'url' => 'https://example.com/image.jpg'
-    ]);
+    public function testCreateWithoutAltText()
+    {
+        $image = $this->factory->create([
+        'url' => 'https://example.com/image.jpg'
+        ]);
 
-    $this->assertEquals('https://example.com/image.jpg', $image['settings']['image']['url']);
-    $this->assertEquals('', $image['settings']['image_alt']);
-  }
+        $this->assertEquals('https://example.com/image.jpg', $image['settings']['image']['url']);
+        $this->assertEquals('', $image['settings']['image_alt']);
+    }
 }

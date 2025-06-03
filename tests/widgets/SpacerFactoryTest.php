@@ -12,28 +12,28 @@ use JPJuliao\MD2Elementor\Widgets\SpacerFactory;
  */
 class SpacerFactoryTest extends TestCase
 {
-  private $factory;
+    private $factory;
 
-  protected function setUp(): void
-  {
-    $this->factory = new SpacerFactory();
-  }
+    protected function setUp(): void
+    {
+        $this->factory = new SpacerFactory();
+    }
 
-  public function testCreateWithDefaultValues()
-  {
-    $spacer = $this->factory->create([]);
+    public function testCreateWithDefaultValues()
+    {
+        $spacer = $this->factory->create([]);
 
-    $this->assertEquals('widget', $spacer['elType']);
-    $this->assertEquals('spacer', $spacer['widgetType']);
-    $this->assertEquals(50, $spacer['settings']['space']['size']);
-  }
+        $this->assertEquals('widget', $spacer['elType']);
+        $this->assertEquals('spacer', $spacer['widgetType']);
+        $this->assertEquals(50, $spacer['settings']['space']['size']);
+    }
 
-  public function testCreateWithCustomHeight()
-  {
-    $spacer = $this->factory->create([
-      'height' => '100'
-    ]);
+    public function testCreateWithCustomHeight()
+    {
+        $spacer = $this->factory->create([
+        'height' => '100'
+        ]);
 
-    $this->assertEquals(100, $spacer['settings']['space']['size']);
-  }
+        $this->assertEquals(100, $spacer['settings']['space']['size']);
+    }
 }

@@ -12,34 +12,34 @@ use JPJuliao\MD2Elementor\Widgets\DividerFactory;
  */
 class DividerFactoryTest extends TestCase
 {
-  private $factory;
+    private $factory;
 
-  protected function setUp(): void
-  {
-    $this->factory = new DividerFactory();
-  }
+    protected function setUp(): void
+    {
+        $this->factory = new DividerFactory();
+    }
 
-  public function testCreateWithDefaultValues()
-  {
-    $divider = $this->factory->create([]);
+    public function testCreateWithDefaultValues()
+    {
+        $divider = $this->factory->create([]);
 
-    $this->assertEquals('widget', $divider['elType']);
-    $this->assertEquals('divider', $divider['widgetType']);
-    $this->assertEquals('solid', $divider['settings']['style']);
-    $this->assertEquals(100, $divider['settings']['width']['size']);
-    $this->assertEquals('center', $divider['settings']['align']);
-  }
+        $this->assertEquals('widget', $divider['elType']);
+        $this->assertEquals('divider', $divider['widgetType']);
+        $this->assertEquals('solid', $divider['settings']['style']);
+        $this->assertEquals(100, $divider['settings']['width']['size']);
+        $this->assertEquals('center', $divider['settings']['align']);
+    }
 
-  public function testCreateWithCustomValues()
-  {
-    $divider = $this->factory->create([
-      'style' => 'dashed',
-      'width' => '50',
-      'alignment' => 'left'
-    ]);
+    public function testCreateWithCustomValues()
+    {
+        $divider = $this->factory->create([
+        'style' => 'dashed',
+        'width' => '50',
+        'alignment' => 'left'
+        ]);
 
-    $this->assertEquals('dashed', $divider['settings']['style']);
-    $this->assertEquals(50, $divider['settings']['width']['size']);
-    $this->assertEquals('left', $divider['settings']['align']);
-  }
+        $this->assertEquals('dashed', $divider['settings']['style']);
+        $this->assertEquals(50, $divider['settings']['width']['size']);
+        $this->assertEquals('left', $divider['settings']['align']);
+    }
 }

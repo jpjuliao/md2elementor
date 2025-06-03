@@ -12,23 +12,22 @@ use JPJuliao\MD2Elementor\Interfaces\WidgetFactoryInterface;
  */
 class VideoFactory implements WidgetFactoryInterface
 {
-
   /**
    * Create a video
    *
    * @param array $attributes
    * @return array
    */
-  public function create(array $attributes): array
-  {
-    return [
-      'id' => IdGenerator::getInstance()->generate(),
-      'elType' => 'widget',
-      'widgetType' => 'video',
-      'settings' => [
+    public function create(array $attributes): array
+    {
+        return [
+        'id' => IdGenerator::getInstance()->generate(),
+        'elType' => 'widget',
+        'widgetType' => 'video',
+        'settings' => [
         'video_type' => 'youtube',
         'youtube_url' => $attributes['url'] ?? ''
-      ]
-    ];
-  }
+        ]
+        ];
+    }
 }

@@ -12,29 +12,29 @@ use JPJuliao\MD2Elementor\Widgets\VideoFactory;
  */
 class VideoFactoryTest extends TestCase
 {
-  private $factory;
+    private $factory;
 
-  protected function setUp(): void
-  {
-    $this->factory = new VideoFactory();
-  }
+    protected function setUp(): void
+    {
+        $this->factory = new VideoFactory();
+    }
 
-  public function testCreateWithDefaultValues()
-  {
-    $video = $this->factory->create([]);
+    public function testCreateWithDefaultValues()
+    {
+        $video = $this->factory->create([]);
 
-    $this->assertEquals('widget', $video['elType']);
-    $this->assertEquals('video', $video['widgetType']);
-    $this->assertEquals('youtube', $video['settings']['video_type']);
-    $this->assertEquals('', $video['settings']['youtube_url']);
-  }
+        $this->assertEquals('widget', $video['elType']);
+        $this->assertEquals('video', $video['widgetType']);
+        $this->assertEquals('youtube', $video['settings']['video_type']);
+        $this->assertEquals('', $video['settings']['youtube_url']);
+    }
 
-  public function testCreateWithCustomUrl()
-  {
-    $video = $this->factory->create([
-      'url' => 'https://youtube.com/watch?v=123'
-    ]);
+    public function testCreateWithCustomUrl()
+    {
+        $video = $this->factory->create([
+        'url' => 'https://youtube.com/watch?v=123'
+        ]);
 
-    $this->assertEquals('https://youtube.com/watch?v=123', $video['settings']['youtube_url']);
-  }
+        $this->assertEquals('https://youtube.com/watch?v=123', $video['settings']['youtube_url']);
+    }
 }

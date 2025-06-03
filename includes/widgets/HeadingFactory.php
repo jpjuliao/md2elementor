@@ -12,24 +12,23 @@ use JPJuliao\MD2Elementor\Interfaces\WidgetFactoryInterface;
  */
 class HeadingFactory implements WidgetFactoryInterface
 {
-
   /**
    * Create a heading
    *
    * @param array $attributes
    * @return array
    */
-  public function create(array $attributes): array
-  {
-    return [
-      'id' => IdGenerator::getInstance()->generate(),
-      'elType' => 'widget',
-      'widgetType' => 'heading',
-      'settings' => [
+    public function create(array $attributes): array
+    {
+        return [
+        'id' => IdGenerator::getInstance()->generate(),
+        'elType' => 'widget',
+        'widgetType' => 'heading',
+        'settings' => [
         'title' => $attributes['text'],
         'header_size' => "h{$attributes['level']}",
         'align' => 'left'
-      ]
-    ];
-  }
+        ]
+        ];
+    }
 }
