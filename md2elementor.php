@@ -6,6 +6,14 @@ namespace jpjuliao\md2elementor;
  * Description: Converts Markdown to Elementor layouts.
  */
 
-if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-    require __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/includes/Autoloader.php';
+
+use MD2Elementor\Autoloader;
+use MD2Elementor\Parser;
+
+Autoloader::register();
+
+function md2elementor_parse($markdown_content) {
+    $parser = new Parser();
+    return $parser->parse($markdown_content);
 }
