@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset name="MD2Elementor">
+    <description>Coding standards for MD2Elementor WordPress plugin</description>
+
+    <!-- Scan these files -->
+    <file>includes</file>
+    <file>tests</file>
+    <file>admin</file>
+    <file>md2elementor.php</file>
+
+    <!-- Exclude vendor directory -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+
+    <!-- Use PSR-12 as base -->
+    <rule ref="PSR12"/>
+
+    <!-- WordPress Coding Standards -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+    <rule ref="Generic.Files.EndFileNewline"/>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+    <arg name="colors"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+
+    <!-- PHP version compatibility -->
+    <config name="testVersion" value="7.4-"/>
+
+    <!-- Minimum PHP version your code must support -->
+    <config name="php_version" value="70400"/>
+</ruleset> 
