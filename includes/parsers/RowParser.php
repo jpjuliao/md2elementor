@@ -1,8 +1,8 @@
 <?php
 
-namespace MD2Elementor\Parsers;
+namespace JPJuliao\MD2Elementor\Parsers;
 
-use MD2Elementor\IdGenerator;
+use JPJuliao\MD2Elementor\IdGenerator;
 
 /**
  * Row parser class

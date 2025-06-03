@@ -1,6 +1,6 @@
 <?php
 
-namespace MD2Elementor;
+namespace JPJuliao\MD2Elementor;
 
 /**
  * Parser class

@@ -1,15 +1,15 @@
 <?php
 
-namespace MD2Elementor\Parsers;
+namespace JPJuliao\MD2Elementor\Parsers;
 
-use MD2Elementor\Widgets\WidgetFactory;
-use MD2Elementor\Widgets\HeadingFactory;
-use MD2Elementor\Widgets\TextFactory;
-use MD2Elementor\Widgets\ImageFactory;
-use MD2Elementor\Widgets\ButtonFactory;
-use MD2Elementor\Widgets\VideoFactory;
-use MD2Elementor\Widgets\SpacerFactory;
-use MD2Elementor\Widgets\DividerFactory;
+use JPJuliao\MD2Elementor\Widgets\WidgetFactory;
+use JPJuliao\MD2Elementor\Widgets\HeadingFactory;
+use JPJuliao\MD2Elementor\Widgets\TextFactory;
+use JPJuliao\MD2Elementor\Widgets\ImageFactory;
+use JPJuliao\MD2Elementor\Widgets\ButtonFactory;
+use JPJuliao\MD2Elementor\Widgets\VideoFactory;
+use JPJuliao\MD2Elementor\Widgets\SpacerFactory;
+use JPJuliao\MD2Elementor\Widgets\DividerFactory;
 
 /**
  * Widget parser class
@@ -80,13 +80,13 @@ class WidgetParser extends BaseParser
           'url' => $matches[2],
           'alt' => $matches[1]
         ]);
-      } elseif (preg_match('/^::: (button|video|spacer|divider)(\s+\[(.*)\])?$/', $line, $matches)) {
+      } elseif (preg_match('/^:::(\s+)?(button|video|spacer|divider)(\s+\[(.*)\])?$/', $line, $matches)) {
         if (!empty($currentText)) {
           $widgets[] = $this->widgetFactories['text']->create(['content' => $currentText]);
           $currentText = '';
         }
-        $attributes = isset($matches[3]) ? $this->parseAttributes($matches[3]) : [];
-        $widgets[] = $this->widgetFactories[$matches[1]]->create($attributes);
+        $attributes = isset($matches[4]) ? $this->parseAttributes($matches[4]) : [];
+        $widgets[] = $this->widgetFactories[$matches[2]]->create($attributes);
       } elseif (trim($line) !== ':::') {
         $currentText .= $line . "\n";
       }

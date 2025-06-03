@@ -1,17 +1,26 @@
 {
-  "name": "yourname/md2elementor",
-  "description": "Convert custom markdown into Elementor layouts for WordPress.",
+  "name": "jpjuliao/md2elementor",
+  "description": "Convert Markdown to Elementor layouts",
   "type": "wordpress-plugin",
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "MarkdownToElementor\\": "includes/"
+      "JPJuliao\\MD2Elementor\\": "includes/"
     }
   },
   "require": {
-    "erusev/parsedown": "^1.7"
+    "erusev/parsedown": "^1.7",
+    "php": ">=7.4"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.5"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JPJuliao\\MD2Elementor\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
   }
 }

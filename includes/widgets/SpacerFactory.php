@@ -1,15 +1,16 @@
 <?php
 
-namespace MD2Elementor\Widgets;
+namespace JPJuliao\MD2Elementor\Widgets;
 
-use MD2Elementor\IdGenerator;
+use JPJuliao\MD2Elementor\IdGenerator;
+use JPJuliao\MD2Elementor\Interfaces\WidgetFactoryInterface;
 
 /**
  * Spacer factory class
  *
  * @package MD2Elementor\Widgets
  */
-class SpacerFactory implements WidgetFactory
+class SpacerFactory implements WidgetFactoryInterface
 {
 
   /**

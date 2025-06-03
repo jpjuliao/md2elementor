@@ -1,6 +1,6 @@
 <?php
 
-namespace MD2Elementor;
+namespace JPJuliao\MD2Elementor;
 
 /**
  * Autoloader class
@@ -16,7 +16,7 @@ class Autoloader
   public static function register()
   {
     spl_autoload_register(function ($class) {
-      $prefix = 'MD2Elementor\\';
+      $prefix = 'JPJuliao\\MD2Elementor\\';
       $base_dir = __DIR__ . '/';
 
       $len = strlen($prefix);
