@@ -1,0 +1,612 @@
+{
+    "version": "0.4",
+    "title": "MD2Elementor Template",
+    "type": "page",
+    "content": [
+        {
+            "id": "1",
+            "elType": "section",
+            "settings": {
+                "layout": "full_width",
+                "gap": "default",
+                "height": "default",
+                "custom_height": {
+                    "unit": "px",
+                    "size": ""
+                },
+                "column_position": "middle",
+                "content_position": "middle",
+                "overflow": "",
+                "stretch_section": "",
+                "html_tag": "div",
+                "background_background": "classic"
+            },
+            "elements": [
+                {
+                    "id": "2",
+                    "elType": "container",
+                    "settings": {
+                        "content_width": "full",
+                        "gap": "default",
+                        "gap_columns_custom": {
+                            "unit": "px",
+                            "size": ""
+                        },
+                        "height": "default",
+                        "column_position": "middle",
+                        "content_position": "middle",
+                        "overflow": "",
+                        "stretch_section": ""
+                    },
+                    "elements": [
+                        {
+                            "id": "3",
+                            "elType": "column",
+                            "settings": {
+                                "_column_size": 100,
+                                "_inline_size": null,
+                                "space_between_widgets": 0,
+                                "padding": {
+                                    "unit": "px",
+                                    "top": "10",
+                                    "right": "10",
+                                    "bottom": "10",
+                                    "left": "10",
+                                    "isLinked": true
+                                }
+                            },
+                            "elements": [
+                                {
+                                    "id": "4",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Welcome to Our Amazing Product",
+                                        "header_size": "h1",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "5",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "6",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 50
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "7",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "8",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Transform Your Business Today",
+                                        "header_size": "h2",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "9",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Experience the power of innovation with our cutting-edge solutions that help businesses grow and succeed in the digital age."
+                                    }
+                                },
+                                {
+                                    "id": "10",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Get Started Now",
+                                        "url": "#contact",
+                                        "button_type": "primary"
+                                    }
+                                },
+                                {
+                                    "id": "11",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "12",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 80
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "13",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "14",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Our Key Features",
+                                        "header_size": "h2",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "15",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Transform your workflow with these powerful features:"
+                                    }
+                                },
+                                {
+                                    "id": "16",
+                                    "elType": "widget",
+                                    "widgetType": "image",
+                                    "settings": {
+                                        "image": {
+                                            "url": "https:\/\/via.placeholder.com\/600x400",
+                                            "id": ""
+                                        },
+                                        "image_alt": "Feature 1"
+                                    }
+                                },
+                                {
+                                    "id": "17",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "18",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Smart Automation",
+                                        "header_size": "h3",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "19",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Streamline your processes with intelligent automation that saves time and reduces errors."
+                                    }
+                                },
+                                {
+                                    "id": "20",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Learn More",
+                                        "url": "#automation",
+                                        "button_type": "secondary"
+                                    }
+                                },
+                                {
+                                    "id": "21",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "22",
+                                    "elType": "widget",
+                                    "widgetType": "divider",
+                                    "settings": {
+                                        "style": "solid",
+                                        "width": {
+                                            "size": 100
+                                        },
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "23",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "24",
+                                    "elType": "widget",
+                                    "widgetType": "image",
+                                    "settings": {
+                                        "image": {
+                                            "url": "https:\/\/via.placeholder.com\/600x400",
+                                            "id": ""
+                                        },
+                                        "image_alt": "Feature 2"
+                                    }
+                                },
+                                {
+                                    "id": "25",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "26",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Advanced Analytics",
+                                        "header_size": "h3",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "27",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Make data-driven decisions with our comprehensive analytics dashboard."
+                                    }
+                                },
+                                {
+                                    "id": "28",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "View Demo",
+                                        "url": "#analytics",
+                                        "button_type": "secondary"
+                                    }
+                                },
+                                {
+                                    "id": "29",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "30",
+                                    "elType": "widget",
+                                    "widgetType": "divider",
+                                    "settings": {
+                                        "style": "solid",
+                                        "width": {
+                                            "size": 100
+                                        },
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "31",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "32",
+                                    "elType": "widget",
+                                    "widgetType": "image",
+                                    "settings": {
+                                        "image": {
+                                            "url": "https:\/\/via.placeholder.com\/600x400",
+                                            "id": ""
+                                        },
+                                        "image_alt": "Feature 3"
+                                    }
+                                },
+                                {
+                                    "id": "33",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "34",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Seamless Integration",
+                                        "header_size": "h3",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "35",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Connect with your favorite tools and platforms effortlessly."
+                                    }
+                                },
+                                {
+                                    "id": "36",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Explore Integrations",
+                                        "url": "#integrations",
+                                        "button_type": "secondary"
+                                    }
+                                },
+                                {
+                                    "id": "37",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "38",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 50
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "39",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "40",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "What Our Clients Say",
+                                        "header_size": "h2",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "41",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "42",
+                                    "elType": "widget",
+                                    "widgetType": "video",
+                                    "settings": {
+                                        "video_type": "youtube",
+                                        "youtube_url": "https:\/\/www.youtube.com\/watch?v=dQw4w9WgXcQ"
+                                    }
+                                },
+                                {
+                                    "id": "43",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "44",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Success Stories",
+                                        "header_size": "h3",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "45",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Hear from businesses that have transformed their operations using our platform."
+                                    }
+                                },
+                                {
+                                    "id": "46",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "47",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "> \"This solution has revolutionized how we handle our daily operations. The automation features alone have saved us countless hours.\"\n> \n> \u2014 Sarah Johnson, CEO of TechCorp"
+                                    }
+                                },
+                                {
+                                    "id": "48",
+                                    "elType": "widget",
+                                    "widgetType": "divider",
+                                    "settings": {
+                                        "style": "solid",
+                                        "width": {
+                                            "size": 100
+                                        },
+                                        "align": "center"
+                                    }
+                                },
+                                {
+                                    "id": "49",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "> \"The analytics dashboard provides insights we never had access to before. It's been a game-changer for our decision-making process.\"\n> \n> \u2014 Michael Chen, Director of Operations"
+                                    }
+                                },
+                                {
+                                    "id": "50",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 50
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "51",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "52",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Ready to Get Started?",
+                                        "header_size": "h2",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "53",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Transform your business today with our innovative solutions."
+                                    }
+                                },
+                                {
+                                    "id": "54",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Contact Sales",
+                                        "url": "#sales",
+                                        "button_type": "primary"
+                                    }
+                                },
+                                {
+                                    "id": "55",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Watch Demo",
+                                        "url": "#demo",
+                                        "button_type": "secondary"
+                                    }
+                                },
+                                {
+                                    "id": "56",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "57",
+                                    "elType": "widget",
+                                    "widgetType": "spacer",
+                                    "settings": {
+                                        "space": {
+                                            "size": 30
+                                        }
+                                    }
+                                },
+                                {
+                                    "id": "58",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ""
+                                    }
+                                },
+                                {
+                                    "id": "59",
+                                    "elType": "widget",
+                                    "widgetType": "heading",
+                                    "settings": {
+                                        "title": "Stay Updated",
+                                        "header_size": "h3",
+                                        "align": "left"
+                                    }
+                                },
+                                {
+                                    "id": "60",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": "Subscribe to our newsletter for the latest updates and features."
+                                    }
+                                },
+                                {
+                                    "id": "61",
+                                    "elType": "widget",
+                                    "widgetType": "button",
+                                    "settings": {
+                                        "text": "Subscribe Now",
+                                        "url": "#subscribe",
+                                        "button_type": "outline"
+                                    }
+                                },
+                                {
+                                    "id": "62",
+                                    "elType": "widget",
+                                    "widgetType": "text-editor",
+                                    "settings": {
+                                        "editor": ":::spacer [height=\"50\"]"
+                                    }
+                                }
+                            ],
+                            "isInner": false
+                        }
+                    ],
+                    "isInner": true
+                }
+            ],
+            "isInner": false
+        }
+    ]
+}

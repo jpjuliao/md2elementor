@@ -16,17 +16,17 @@ class RowParser extends BaseParser
    *
    * @var ColumnParser
    */
-    private $columnParser;
+  private $columnParser;
 
   /**
    * Constructor
    *
    * @param ColumnParser $columnParser
    */
-    public function __construct(ColumnParser $columnParser)
-    {
-        $this->columnParser = $columnParser;
-    }
+  public function __construct(ColumnParser $columnParser)
+  {
+    $this->columnParser = $columnParser;
+  }
 
   /**
    * Parse rows
@@ -34,30 +34,59 @@ class RowParser extends BaseParser
    * @param array $lines
    * @return array
    */
-    public function parseRows($lines)
-    {
-        $rows = [];
+  public function parseRows($lines)
+  {
+    if (empty($lines)) {
+      return [];
+    }
+
+    // If no explicit row markers, treat all content as one row
+    if (!$this->hasRowMarkers($lines)) {
+      return [$this->createRow($lines)];
+    }
+
+    $rows = [];
+    $currentRow = null;
+    $rowContent = [];
+
+    foreach ($lines as $line) {
+      if (preg_match('/^::: row(\s+\[(.*)\])?$/', $line, $matches)) {
+        if ($currentRow !== null || !empty($rowContent)) {
+          $rows[] = $this->createRow($rowContent);
+          $rowContent = [];
+        }
+        $currentRow = isset($matches[2]) ? $this->parseAttributes($matches[2]) : [];
+      } elseif (trim($line) === ':::' && $currentRow !== null) {
+        $rows[] = $this->createRow($rowContent);
         $currentRow = null;
         $rowContent = [];
-
-        foreach ($lines as $line) {
-            if (preg_match('/^::: row(\s+\[(.*)\])?$/', $line, $matches)) {
-                if ($currentRow !== null) {
-                    $rows[] = $this->createRow($rowContent);
-                    $rowContent = [];
-                }
-                $currentRow = isset($matches[2]) ? $this->parseAttributes($matches[2]) : [];
-            } elseif (trim($line) === ':::' && $currentRow !== null) {
-                $rows[] = $this->createRow($rowContent);
-                $currentRow = null;
-                $rowContent = [];
-            } elseif ($currentRow !== null) {
-                $rowContent[] = $line;
-            }
-        }
-
-        return $rows;
+      } else {
+        $rowContent[] = $line;
+      }
     }
+
+    if (!empty($rowContent)) {
+      $rows[] = $this->createRow($rowContent);
+    }
+
+    return $rows;
+  }
+
+  /**
+   * Check if content has row markers
+   *
+   * @param array $lines
+   * @return bool
+   */
+  private function hasRowMarkers($lines)
+  {
+    foreach ($lines as $line) {
+      if (preg_match('/^::: row(\s+\[(.*)\])?$/', $line)) {
+        return true;
+      }
+    }
+    return false;
+  }
 
   /**
    * Create a row
@@ -65,14 +94,26 @@ class RowParser extends BaseParser
    * @param array $content
    * @return array
    */
-    private function createRow($content)
-    {
-        return [
-        'id' => IdGenerator::getInstance()->generate(),
-        'elType' => 'container',
-        'settings' => [],
-        'elements' => $this->columnParser->parseColumns($content),
-        'isInner' => true
-        ];
-    }
+  private function createRow($content)
+  {
+    return [
+      'id' => IdGenerator::getInstance()->generate(),
+      'elType' => 'container',
+      'settings' => [
+        'content_width' => 'full',
+        'gap' => 'default',
+        'gap_columns_custom' => [
+          'unit' => 'px',
+          'size' => '',
+        ],
+        'height' => 'default',
+        'column_position' => 'middle',
+        'content_position' => 'middle',
+        'overflow' => '',
+        'stretch_section' => ''
+      ],
+      'elements' => $this->columnParser->parseColumns($content),
+      'isInner' => true
+    ];
+  }
 }
